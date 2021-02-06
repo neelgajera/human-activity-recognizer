@@ -9,8 +9,12 @@ suported actions: Standing, Walking, Sitting, Lying Down, Stand up, Sit down, Fa
 
 ## Prerequisites
 
-- Python > 3.6
-- Pytorch > 1.3.1
+- Python > 3.7
+- Pytorch > 1.7
+- opencv-python > 4.5.1
+- tqdm > 4.56
+- scipy > 1.6
+- matplotlib > 3.3.4
 
 ## Pre-Trained Models
 [models](https://drive.google.com/file/d/1nTRDi0hU5kLEldrJbZtteynzJWObKwOL/view?usp=sharing)
