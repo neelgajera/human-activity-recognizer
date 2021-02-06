@@ -32,7 +32,7 @@ download this file and extrect to project directory
 
 * input video as a input
 ```
-python det.py -V videoplayback.mp4
+python det.py -V cs4.mp4
 ```
 * run in colab without install any dependencies
 ```Untitled10.ipynb```
