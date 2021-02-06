@@ -30,7 +30,7 @@ download this file and extrect to project directory
 python det.py
 ```
 * run in colab without install any dependencies
-Untitled10.ipynb
+```Untitled10.ipynb```
 
 
 ## Reference
