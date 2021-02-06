@@ -39,7 +39,7 @@ if __name__ == '__main__':
     while(True):
         f += 1
         ret, frame = cap.read()
-         if ret:
+        if ret:
             frame = preproc(frame)
             detected = detect_model.detect(frame, need_resize=False, expand_bb=10)
             print(detected)
