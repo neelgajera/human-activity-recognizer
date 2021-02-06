@@ -23,7 +23,7 @@ download this file and extrect to project directory
 ## Basic Use
 * use web cam as a input
  ```
- python det.py -C 0
+ python det.py -C 
  ```
 * pyqt based app 
  ``` 
@@ -32,7 +32,7 @@ download this file and extrect to project directory
 
 * input video as a input
 ```
-python det.py 
+python det.py -V videoplayback.mp4
 ```
 * run in colab without install any dependencies
 ```Untitled10.ipynb```
