@@ -12,7 +12,7 @@ from PoseEstimateLoader import SPPE_FastPose
 from fn import draw_single
 from Track.Tracker import Detection, Tracker
 from ActionsEstLoader import TSSTG
-source = 'videoplayback.mp4'
+so = '1.mp4'
 def preproc(image):
     image = resize_fn(image)
     image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
@@ -22,9 +22,18 @@ def kpt2bbox(kpt, ex=20):
                      kpt[:, 0].max() + ex, kpt[:, 1].max() + ex))
 if __name__ == '__main__':
     par = argparse.ArgumentParser(description='Human Fall Detection Demo.')
-    par.add_argument('-C', '--camera', default=source,  # required=True,  # default=2,
-                        help='Source of camera (0) or video file path.')
+    group = par.add_mutually_exclusive_group()
+    group.add_argument('-C', '--camera', action="store_true",  # default=2,
+                        help='Source of camera (0) ')
+    group.add_argument('-V', '--video', default=so,  # required=True,  # default=2,
+                        help=' video file')
     args = par.parse_args()
+    if args.camera:
+        source = 0
+    elif args.video:
+        source = args.video
+    else:
+        sorce = so
     device = 'cuda' if torch.cuda.is_available() else 'cpu'
     detect_model = TinyYOLOv3_onecls(384,device=device)
     max_age = 30
@@ -92,3 +101,4 @@ if __name__ == '__main__':
                     breakpoint
     cam.stop()        
     cv2.destroyAllWindows()
+
