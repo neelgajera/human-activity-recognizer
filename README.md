@@ -25,8 +25,10 @@ download this file and extrect to project directory
  ```
  python det.py -C 0
  ```
- * pyqt based app 
-```python app.py```
+* pyqt based app 
+ ``` 
+ python app.py
+ ```
 
 * input video as a input
 ```
