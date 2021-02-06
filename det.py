@@ -12,7 +12,7 @@ from PoseEstimateLoader import SPPE_FastPose
 from fn import draw_single
 from Track.Tracker import Detection, Tracker
 from ActionsEstLoader import TSSTG
-source = 'sorce.mp4'
+source = 'videoplayback.mp4'
 def preproc(image):
     image = resize_fn(image)
     image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
