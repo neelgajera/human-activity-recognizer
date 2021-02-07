@@ -1,5 +1,5 @@
 # human-activity-recognizer
-this is skeliton based human activity recognizer 
+this is skeleton based human activity recognizer 
 Using Tiny-YOLO oneclass to detect each person in the frame and use 
 AlphaPose(resnet50) to get skeleton-pose and then use
 ST-GCN model to predict action from every 30 frames 
